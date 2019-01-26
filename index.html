@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+
+    <!-- moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header text-center">
+              <h1>Anytime is the train time</h1>
+              <p>Choo Choo.Chee Chee.</p>
+              <h2 id="time"></h2>
+            </div>
+            <div class="card-body">
+                <p>Current train schedule</p>
+                <tr></tr>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Train Name</label>
+                            <input type="text" class="form-control" id="nameInput" aria-describedby="emailHelp" placeholder="Name"> 
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Destination</label>
+                            <input type="text" class="form-control" id="destinationInput" placeholder="Destination">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">First Train Time(HH:mm - military time)</label>
+                            <input type="text" class="form-control" id="firsttrainInput" placeholder="Ex: 1015 for (10:15)">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Frequency (min)</label>
+                            <input type="number" class="form-control" id="frequencyInput" placeholder="15">
+                        </div>
+                        <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div> 
+            </div>
+        </div>
+    </body>
+    <script src="assets/javascript/app.js"></script>
+</html>
